@@ -1,7 +1,7 @@
 ;; KeysBindings
 
 ;; (ctrl+c)(s)
-(define-set-key (kbd "C-c s") 'shell)
+(global-set-key (kbd "C-c s") 'shell)
 
 ;; (ctl+x)(c) for delete space char
 (global-set-key (kbd "C-x c") 'whitespace-cleanup)
