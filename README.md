@@ -7,12 +7,12 @@ How to change number of colors:
 ================================
 Check number of colors:
 
-$tput colors
+<code> tput colors </code>
 
 or in emacs with command:
 M-x list-colors-display
 
-$sudo apt-get install ncurses-term
+<code> sudo apt-get install ncurses-term </code>
 
 and stick the following in your ~/.bashrc and/or ~/.bash_profile:
 
@@ -21,11 +21,11 @@ export TERM=xterm-256color
 
 How to install/update emacs on ubuntu:
 ===============================
-$> sh update-emacs.sh
+<code> sh update-emacs.sh </code>
 
 How to install emacs on fedora:
 
-$> sudo yum update
+<code> sudo yum update </code>
 
-$> sudo yum install emacs
+<code> sudo yum install emacs </code>
 
