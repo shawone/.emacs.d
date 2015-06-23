@@ -31,8 +31,9 @@
       read-file-name-completion-ignore-case t
       read-buffer-completion-ignore-case t)
 
-;;remove tab
-(setq-default indent-tabs-mode nil)
+;;set indent linux style
+(setq c-default-style "linux"
+      c-basic-offset 4)
 
 (setq-default save-place t)
 (require 'saveplace)
