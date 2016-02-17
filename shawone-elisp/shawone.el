@@ -31,14 +31,25 @@
       read-file-name-completion-ignore-case t
       read-buffer-completion-ignore-case t)
 
-;;set indent linux style
+;; set indent linux style by default
 (setq c-default-style "linux"
       c-basic-offset 4)
 
+;; switch to kernel coding style: M-x kernel-mode
+;; back to linux c coding style: M-x c-mode
+(defun kernel-mode ()
+  "C mode with adjusted defaults for use with the Linux kernel."
+  (interactive)
+  (c-mode)
+  (c-set-style "K&R")
+  (setq c-basic-offset 8))
+
+;; saved-places
 (setq-default save-place t)
 (require 'saveplace)
 (setq save-place-file "~/.emacs.d/saved-places")
 
+;; ignore files
 (setq completion-ignored-extensions '(".o" ".a" ".so"
                                       ".elc"
                                       ".class" ".dll"
@@ -54,7 +65,7 @@
     (tool-bar-mode -1))
 (blink-cursor-mode -1)
 (if window-system
-          (scroll-bar-mode -1))
+    (scroll-bar-mode -1))
 (column-number-mode 1)
 (winner-mode 1)
 ;; Replace selection
@@ -93,6 +104,7 @@
 activate compile)
   "Disable selection after `narrow-to-region'"
   (deactivate-mark))
+
 ;; KeysBinding
 (require 'shawone-keys)
 
