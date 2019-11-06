@@ -1,5 +1,5 @@
-configure emacs with elpa:
- Alt+x list-packages
- select mic-paren
- [i] mark for installation
- [x] execute / run installation
+configure emacs with elpa:<br/>
+ Alt+x list-packages<br/>
+ select mic-paren<br/>
+ [i] mark for installation<br/>
+ [x] execute / run installation<br/>
