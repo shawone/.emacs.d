@@ -27,20 +27,25 @@
 (setq whitespace-style '(face lines-tail))
 (add-hook 'prog-mode-hook 'whitespace-mode)
 
-;; KeysBindings
+;; mode linux style
+(setq c-default-style "K&R"
+      c-basic-offset 8)
 
+;; clean whitespace after 2 retlines
+(setq kill-whole-line t)
+
+;; show column number
+(column-number-mode t)
+
+;;----------------------- KeysBindings -----------------------;;
 ;; (ctrl+c)(s)
 (global-set-key (kbd "C-c s") 'shell)
 
-;; (ctl+x)(c) for delete space char
-(global-set-key (kbd "C-x c") 'whitespace-cleanup)
+;; (ctl+x)(c) for delete trailing whitespace
+(global-set-key (kbd "C-x c") 'delete-trailing-whitespace)
 
 ;;step1-> (ctrl+space)(arrow) for selection
 ;;step2-> (ctrl+c)(c) for comment
 ;; or  -> (ctrl+c)(u) for uncomment
 (global-set-key (kbd "C-c c") 'comment-region)
 (global-set-key (kbd "C-c u") 'uncomment-region)
-
-;; mode linux style
-(setq c-default-style "K&R"
-      c-basic-offset 8)
