@@ -49,3 +49,8 @@
 ;; or  -> (ctrl+c)(u) for uncomment
 (global-set-key (kbd "C-c c") 'comment-region)
 (global-set-key (kbd "C-c u") 'uncomment-region)
+
+;;------------------------- Powerline ------------------------;;
+(require 'powerline)
+(powerline-default-theme)
+(setq powerline-default-separator 'utf-8)
